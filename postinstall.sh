@@ -26,6 +26,9 @@ yum -y install unrar arj p7zip p7zip-plugins lha sharutils unzoo unace bzip2 gzi
 
 # Una terminal como la gente
 yum -y install zsh
+git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
+cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
+chsh -s /bin/zsh
 
 #desarrollo (falta todavia)
 yum -y groupinstall "Development Tools"
@@ -36,6 +39,10 @@ yum -y install vim-common vim-enhanced vim-latex vim-latex-doc vim-X11 ctags
 yum -y install glade
 ##geany por las dudas
 ##pip, virtualenv, git
+yum -y install python-pip git
+alias pip = "python-pip"
+pip install virtualenv
+
 yum -y install highlight highlight-gui
 
 #Codecs
@@ -65,7 +72,7 @@ nautilus-extensions nautilus-image-converter nautilus-open-terminal nautilus-sen
 yum -y install openclipart
 
 # LaTeX
-yum -y install texlive-svg texlive-svg-inkscape-doc texlive-pdftex pstoedit pdf2svg texlive-pdftools texlive-inconsolata texlive-inconsolata-doc writer2latex texlive-tex-gyre* texlive-collection-fontsrecommended texlive-pst* texlive-collection-pstricks texlive-svgcolor texlive-spot texlive-biolinum* texlive-libertine* texlive-libgreek
+yum -y install texlive-svg texlive-svg-inkscape-doc texlive-pdftex pstoedit pdf2svg texlive-pdftools texlive-inconsolata texlive-inconsolata-doc writer2latex texlive-tex-gyre* texlive-collection-fontsrecommended texlive-pst* texlive-collection-pstricks texlive-svgcolor texlive-spot texlive-biolinum* texlive-libertine* texlive-libgreek texlive-cantarell
 
 # Inkscape
 yum -y install inkscape inkscape-docs inkscape-sozi inkscape-view
