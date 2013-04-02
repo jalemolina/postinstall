@@ -6,14 +6,14 @@ yum -y update
 
 #rpmfusion
 #Probar con los de postinstaller y sino con xenode
-rpm --import http://sourceforge.net/projects/postinstaller/files/data/RPM-GPG-KEY-rpmfusion-free-fedora-18
-rpm --import http://commondatastorage.googleapis.com/xenodecdn/RPM-GPG-KEY-rpmfusion-free-fedora-18
-rpm --import http://sourceforge.net/projects/postinstaller/files/data/RPM-GPG-KEY-rpmfusion-nonfree-fedora-18 
-rpm --import http://commondatastorage.googleapis.com/xenodecdn/RPM-GPG-KEY-rpmfusion-nonfree-fedora-18
+rpm -y --import http://sourceforge.net/projects/postinstaller/files/data/RPM-GPG-KEY-rpmfusion-free-fedora-18
+rpm -y --import http://commondatastorage.googleapis.com/xenodecdn/RPM-GPG-KEY-rpmfusion-free-fedora-18
+rpm -y --import http://sourceforge.net/projects/postinstaller/files/data/RPM-GPG-KEY-rpmfusion-nonfree-fedora-18 
+rpm -y --import http://commondatastorage.googleapis.com/xenodecdn/RPM-GPG-KEY-rpmfusion-nonfree-fedora-18
 #### sigue de lo anterior
 yum localinstall --nogpgcheck http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-stable.noarch.rpm http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-stable.noarch.rpm
 ####LIVNA
-rpm -ivh http://rpm.livna.org/livna-release.rpm
+rpm -ivhy http://rpm.livna.org/livna-release.rpm
 yum -y update
 
 #drivers video libre
@@ -39,8 +39,8 @@ yum -y install vim-common vim-enhanced vim-latex vim-latex-doc vim-X11 ctags
 yum -y install glade
 ##geany por las dudas
 ##pip, virtualenv, git
-yum -y install python-pip git
-alias pip = "python-pip"
+yum -y install git
+easy_install pip
 pip install virtualenv
 
 yum -y install highlight highlight-gui
@@ -67,7 +67,7 @@ yum -y install dia dia-CMOS dia-Digital dia-electric2 dia-electronic dia-gnomeDI
 yum -y install audacious audacious-libs audacious-plugins audacious-plugins-freeworld audacious-plugins-freeworld-aac audacious-plugins-freeworld-ffaudio audacious-plugins-freeworld-mp3
 
 # Extensiones de Nautilus
-nautilus-extensions nautilus-image-converter nautilus-open-terminal nautilus-sendto nautilus-terminal nautilus-sound-converter
+# nautilus-extensions nautilus-image-converter nautilus-open-terminal nautilus-sendto nautilus-terminal nautilus-sound-converter
 
 yum -y install openclipart
 
