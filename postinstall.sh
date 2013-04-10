@@ -4,22 +4,25 @@
 yum -y install yum-plugin-fastestmirror
 yum -y update
 
-#rpmfusion
-#Probar con los de postinstaller y sino con xenode
+# rpmfusion
+# Probar con los de postinstaller y sino con xenode
 rpm -y --import http://sourceforge.net/projects/postinstaller/files/data/RPM-GPG-KEY-rpmfusion-free-fedora-18
 rpm -y --import http://commondatastorage.googleapis.com/xenodecdn/RPM-GPG-KEY-rpmfusion-free-fedora-18
 rpm -y --import http://sourceforge.net/projects/postinstaller/files/data/RPM-GPG-KEY-rpmfusion-nonfree-fedora-18 
 rpm -y --import http://commondatastorage.googleapis.com/xenodecdn/RPM-GPG-KEY-rpmfusion-nonfree-fedora-18
 #### sigue de lo anterior
 yum localinstall --nogpgcheck http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-stable.noarch.rpm http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-stable.noarch.rpm
-####LIVNA
+#### LIVNA
 rpm -ivhy http://rpm.livna.org/livna-release.rpm
 yum -y update
 
-#drivers video libre
+# drivers video libre
 yum -y install mesa-dri-drivers mesa-libGLU
 yum -y install libtxc_dxtn --enablerepo=rpmfusion-free-updates-testing
 yum -y update
+
+# Pre carga de aplicaciones para acelerar el sistema
+yum -y install preload
 
 # Compresores y descompresores
 yum -y install unrar arj p7zip p7zip-plugins lha sharutils unzoo unace bzip2 gzip tar unzip
