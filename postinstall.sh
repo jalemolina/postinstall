@@ -58,7 +58,7 @@ yum -y install libdvdread libdvdnav libdvdcss
 yum -y install gnome-shell-extension-common gnome-tweak-tool dconf-editor
 
 # Aplicaciones
-yum -y install --skip-broken cheese gimp gimp-help-es gimp-resynthesizer sound-juicer vlc java-1.7.0-openjdk ntfs-3g easytag java-1.7.0-openjdk-devel openshot btrfs-progs wget axel icedtea-web alsa-plugins-pulseaudio zim shutter blender YafaRay-blender AcetoneISO2 audacity-freeworld mypaint mypaint-data pinta pdfmod klavaro posterazor scribus dvdisaster liveusb-creator youtube-dl pdfjam glabels planner pdfedit pdfshuffler pitivi soundconverter fritzing impressive testdisk
+yum -y install --skip-broken cheese gimp gimp-help-es gimp-resynthesizer sound-juicer vlc java-1.7.0-openjdk ntfs-3g easytag java-1.7.0-openjdk-devel openshot btrfs-progs wget axel icedtea-web alsa-plugins-pulseaudio zim shutter blender YafaRay-blender AcetoneISO2 audacity-freeworld mypaint mypaint-data pinta pdfmod klavaro posterazor scribus dvdisaster liveusb-creator youtube-dl pdfjam glabels planner pdfedit pdfshuffler pitivi soundconverter fritzing impressive testdisk duff
 
 # mplayer
 yum -y install mplayer mplayer-gui smplayer
