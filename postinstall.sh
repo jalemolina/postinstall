@@ -42,9 +42,8 @@ yum -y install vim-common vim-enhanced vim-latex vim-latex-doc vim-X11 ctags
 yum -y install glade
 ##geany por las dudas
 ##pip, virtualenv, git
-yum -y install git
-easy_install pip
-pip install virtualenv
+yum -y install git python-pip
+python-pip install virtualenv
 
 yum -y install highlight highlight-gui
 
@@ -117,4 +116,5 @@ yum -y install hplip hplip-common libsane-hpaio
 # Juegos
 yum -y install gbrainy gltron warmux gnome-games*
 
-
+# Gnome shell extensions
+yum -y install  gnome-shell-extension-weather gnome-shell-extension-presentation-mode gnome-shell-extension-pomodoro
