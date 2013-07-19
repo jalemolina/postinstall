@@ -37,7 +37,7 @@ chsh -s /bin/zsh
 yum -y groupinstall "Development Tools"
 yum -y groupinstall "Development Libraries"
 ##vim, plugins
-yum -y install vim-common vim-enhanced vim-latex vim-latex-doc vim-X11 ctags
+yum -y install vim-common vim-enhanced vim-latex vim-latex-doc vim-X11 ctags ack
 # Glade
 yum -y install glade
 ##geany por las dudas
@@ -74,7 +74,7 @@ yum -y install audacious audacious-libs audacious-plugins audacious-plugins-free
 yum -y install openclipart
 
 # LaTeX
-yum -y install texlive-svg texlive-svg-inkscape-doc texlive-pdftex pstoedit pdf2svg texlive-pdftools texlive-inconsolata texlive-inconsolata-doc writer2latex texlive-tex-gyre* texlive-collection-fontsrecommended texlive-pst* texlive-collection-pstricks texlive-svgcolor texlive-spot texlive-biolinum* texlive-libertine* texlive-libgreek texlive-cantarell
+yum -y install texlive-svg texlive-svg-inkscape-doc texlive-pdftex pstoedit pdf2svg texlive-pdftools texlive-inconsolata texlive-inconsolata-doc writer2latex texlive-tex-gyre* texlive-collection-fontsrecommended texlive-pst* texlive-collection-pstricks texlive-svgcolor texlive-spot texlive-biolinum* texlive-libertine* texlive-libgreek texlive-cantarell texlive-psnfss
 
 # Inkscape
 yum -y install inkscape inkscape-docs inkscape-sozi inkscape-view
