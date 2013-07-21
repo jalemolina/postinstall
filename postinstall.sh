@@ -43,7 +43,7 @@ yum -y install glade
 ##geany por las dudas
 ##pip, virtualenv, git
 yum -y install git python-pip
-python-pip install virtualenv pep8 pylint pyflakes flake8
+python-pip install virtualenv pep8 pylint pyflakes flake8 rope ropemode
 
 yum -y install highlight highlight-gui
 
