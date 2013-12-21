@@ -47,6 +47,10 @@ python-pip install virtualenv pep8 pylint pyflakes flake8 rope ropemode
 
 yum -y install highlight highlight-gui
 
+# npm node.js para coffescript y coffelint de vim
+yum -y install nodejs npm nodejs-mkdirp 
+npm install -g inherits optimist coffee-script coffeelint
+
 #Codecs
 yum -y install gstreamer*-libav gstreamer*-plugins-bad-free-extras gstreamer*-plugins-bad-freeworld gstreamer*-plugins-good-extras gstreamer*-plugins-ugly gstreamer-ffmpeg xine-lib-extras xine-lib-extras-freeworld k3b-extras-freeworld
 
@@ -93,11 +97,11 @@ yum -y evince-djvu evince-dvi
 yum -y install levien-inconsolata-fonts aajohan-comfortaa-fonts linux-libertine*
 
 # Navegadores
-# Chromium
-cd /etc/yum.repos.d/
-wget http://repos.fedorapeople.org/repos/spot/chromium-stable/fedora-chromium-stable.repo
-### Vuelve al directorio anterior
-cd -
+# Chromium =================> Deshabilitado porque crea conflicto con npm por el motor v8
+#cd /etc/yum.repos.d/
+#wget http://repos.fedorapeople.org/repos/spot/chromium-stable/fedora-chromium-stable.repo
+#### Vuelve al directorio anterior
+#cd -
 ## Google Chrome
 touch /etc/yum.repos.d/google-chrome.repo
 echo '[google-chrome]
