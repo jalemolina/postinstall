@@ -49,7 +49,7 @@ yum -y install highlight highlight-gui
 
 # npm node.js para coffescript y coffelint de vim
 yum -y install nodejs npm nodejs-mkdirp 
-npm install -g inherits optimist coffee-script coffeelint
+npm install -g inherits optimist coffee-script coffeelint meteorite
 
 #Codecs
 yum -y install gstreamer*-libav gstreamer*-plugins-bad-free-extras gstreamer*-plugins-bad-freeworld gstreamer*-plugins-good-extras gstreamer*-plugins-ugly gstreamer-ffmpeg xine-lib-extras xine-lib-extras-freeworld k3b-extras-freeworld
