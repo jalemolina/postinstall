@@ -6,14 +6,14 @@ yum -y update
 
 # rpmfusion
 # Probar con los de postinstaller y sino con xenode
-rpm -y --import http://sourceforge.net/projects/postinstaller/files/data/RPM-GPG-KEY-rpmfusion-free-fedora-18
-rpm -y --import http://commondatastorage.googleapis.com/xenodecdn/RPM-GPG-KEY-rpmfusion-free-fedora-18
-rpm -y --import http://sourceforge.net/projects/postinstaller/files/data/RPM-GPG-KEY-rpmfusion-nonfree-fedora-18 
-rpm -y --import http://commondatastorage.googleapis.com/xenodecdn/RPM-GPG-KEY-rpmfusion-nonfree-fedora-18
+rpm --import http://sourceforge.net/projects/postinstaller/files/data/RPM-GPG-KEY-rpmfusion-free-fedora-20
+rpm --import http://commondatastorage.googleapis.com/xenodecdn/RPM-GPG-KEY-rpmfusion-free-fedora-20
+rpm --import http://sourceforge.net/projects/postinstaller/files/data/RPM-GPG-KEY-rpmfusion-nonfree-fedora-20 
+rpm --import http://commondatastorage.googleapis.com/xenodecdn/RPM-GPG-KEY-rpmfusion-nonfree-fedora-20
 #### sigue de lo anterior
 yum localinstall --nogpgcheck http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-stable.noarch.rpm http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-stable.noarch.rpm
 #### LIVNA
-rpm -ivhy http://rpm.livna.org/livna-release.rpm
+rpm -ivhu http://rpm.livna.org/livna-release.rpm
 yum -y update
 
 # drivers video libre
@@ -43,7 +43,7 @@ yum -y install glade
 ##geany por las dudas
 ##pip, virtualenv, git
 yum -y install git python-pip
-python-pip install virtualenv pep8 pylint pyflakes flake8 rope ropemode
+python-pip install --upgrade virtualenv pep8 pylint pyflakes flake8 rope ropemode
 
 yum -y install highlight highlight-gui
 
@@ -61,7 +61,7 @@ yum -y install libdvdread libdvdnav libdvdcss
 yum -y install gnome-shell-extension-common gnome-tweak-tool dconf-editor
 
 # Aplicaciones
-yum -y install --skip-broken cheese gimp gimp-help-es gimp-resynthesizer sound-juicer vlc java-1.7.0-openjdk ntfs-3g easytag java-1.7.0-openjdk-devel openshot btrfs-progs wget axel icedtea-web alsa-plugins-pulseaudio zim shutter blender YafaRay-blender AcetoneISO2 audacity-freeworld mypaint mypaint-data pinta pdfmod klavaro posterazor scribus dvdisaster liveusb-creator youtube-dl pdfjam glabels planner pdfedit pdfshuffler pitivi soundconverter fritzing impressive testdisk duff htop
+yum -y install --skip-broken cheese gimp gimp-help-es gimp-resynthesizer sound-juicer vlc java-1.7.0-openjdk ntfs-3g easytag java-1.7.0-openjdk-devel openshot btrfs-progs wget axel icedtea-web alsa-plugins-pulseaudio Zim shutter blender YafaRay-blender AcetoneISO2 audacity-freeworld mypaint mypaint-data pinta pdfmod klavaro posterazor scribus dvdisaster liveusb-creator youtube-dl pdfjam glabels planner pdfedit pdfshuffler pitivi soundconverter fritzing impressive testdisk duff htop
 
 # mplayer
 yum -y install mplayer mplayer-gui smplayer
@@ -111,7 +111,7 @@ enabled=1
 gpgcheck=1
 gpgkey=https://dl-ssl.google.com/linux/linux_signing_key.pub' > /etc/yum.repos.d/google-chrome.repo
 yum -y update
-yum -y install chromium
+#yum -y install chromium
 yum -y install google-chrome-stable
 
 # Impresoras HP
