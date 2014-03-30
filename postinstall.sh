@@ -52,7 +52,7 @@ yum -y install nodejs npm nodejs-mkdirp
 npm install -g inherits optimist coffee-script coffeelint meteorite less
 
 #Codecs
-yum -y install gstreamer*-libav gstreamer*-plugins-bad-free-extras gstreamer*-plugins-bad-freeworld gstreamer*-plugins-good-extras gstreamer*-plugins-ugly gstreamer-ffmpeg xine-lib-extras xine-lib-extras-freeworld k3b-extras-freeworld
+yum -y install gstreamer*-libav gstreamer*-plugins-bad-free-extras gstreamer*-plugins-bad-freeworld gstreamer*-plugins-good-extras gstreamer*-plugins-ugly gstreamer-ffmpeg xine-lib-extras xine-lib-extras-freeworld k3b-extras-freeworld libaacs libbluray libbluray-bdj
 
 # Leer dvd cifrados
 yum -y install libdvdread libdvdnav libdvdcss
