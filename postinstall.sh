@@ -110,7 +110,22 @@ baseurl=http://dl.google.com/linux/chrome/rpm/stable/x86_64
 enabled=1
 gpgcheck=1
 gpgkey=https://dl-ssl.google.com/linux/linux_signing_key.pub' > /etc/yum.repos.d/google-chrome.repo
+
+# MongoDB
+touch /etc/yum.repos.d/mongodb.repo
+echo '[mongodb]
+name=MongoDB Repository
+baseurl=http://downloads-distro.mongodb.org/repo/redhat/os/x86_64/
+gpgcheck=0
+enabled=1' > /etc/yum.repos.d/mongodb.repo
+yum -y install mongodb-org
+# systemctl start mongod 
+# chkconfig mongod on
+# systemctl status mongod 
+
+
 yum -y update
+# No se instala chromium por conflictos del paquete V8 con nodejs
 #yum -y install chromium
 yum -y install google-chrome-stable
 
@@ -121,4 +136,11 @@ yum -y install hplip hplip-common libsane-hpaio
 yum -y install gbrainy gltron warmux gnome-games*
 
 # Gnome shell extensions
-yum -y install  gnome-shell-extension-weather gnome-shell-extension-presentation-mode gnome-shell-extension-pomodoro
+yum -y install  gnome-shell-extension-weather gnome-shell-extension-pomodoro
+
+# Terminal desplegable
+yum -y install glib gtk vala vte vte3 vte-devel vte3-devel
+git clone https://github.com/linvinus/AltYo AltYo
+cd AltYo
+make
+make install
