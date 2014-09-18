@@ -105,8 +105,8 @@ yum -y install levien-inconsolata-fonts aajohan-comfortaa-fonts linux-libertine*
 ## Google Chrome
 touch /etc/yum.repos.d/google-chrome.repo
 echo '[google-chrome]
-name=google-chrome - x86_64
-baseurl=http://dl.google.com/linux/chrome/rpm/stable/x86_64
+name=google-chrome - \$basearch
+baseurl=http://dl.google.com/linux/chrome/rpm/stable/\$basearch
 enabled=1
 gpgcheck=1
 gpgkey=https://dl-ssl.google.com/linux/linux_signing_key.pub' > /etc/yum.repos.d/google-chrome.repo
