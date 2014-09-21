@@ -115,7 +115,7 @@ gpgkey=https://dl-ssl.google.com/linux/linux_signing_key.pub' > /etc/yum.repos.d
 touch /etc/yum.repos.d/mongodb.repo
 echo '[mongodb]
 name=MongoDB Repository
-baseurl=http://downloads-distro.mongodb.org/repo/redhat/os/x86_64/
+baseurl=http://downloads-distro.mongodb.org/repo/redhat/os/\$basearch/
 gpgcheck=0
 enabled=1' > /etc/yum.repos.d/mongodb.repo
 yum -y install mongodb-org
