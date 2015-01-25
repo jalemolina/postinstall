@@ -18,4 +18,5 @@ cp ~/.vim/bundle/vim-powerline/fontpatcher/*.ttf /usr/share/fonts/
 
 fc-cache -vf
 fc-cache -vf ~/.fonts
+fc-cache -vf ~/.config/fontconfig/conf.d
 fc-cache -vf /usr/share/fonts

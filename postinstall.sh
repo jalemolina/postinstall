@@ -93,8 +93,8 @@ yum -y groupinstall "Office/Productivity"
 yum -y install libreoffice libreoffice-langpack-es libreoffice-nlpsolver libreoffice-ogltrans libreoffice-presentation-minimizer libreoffice-report-builder libreoffice-writer2latex libreoffice-writer2xhtml ooo2gd openoffice.org-diafilter openoffice.org-ooolatex unoconv
 yum -y evince-djvu evince-dvi
 
-# Fuentes del sistema
-yum -y install levien-inconsolata-fonts aajohan-comfortaa-fonts linux-libertine*
+# Fuentes del sistema y emojis
+yum -y install levien-inconsolata-fonts aajohan-comfortaa-fonts linux-libertine-fonts linux-libertine-fonts-common linux-libertine-biolinum-fonts gdouros-symbola-fonts
 
 # Navegadores
 # Chromium =================> Deshabilitado porque crea conflicto con npm por el motor v8
