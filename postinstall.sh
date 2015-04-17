@@ -47,6 +47,10 @@ python-pip install --upgrade virtualenv pep8 pylint pyflakes flake8 rope ropemod
 
 yum -y install highlight highlight-gui
 
+#offline documentation with zeal
+dnf copr enable phracek/zeal
+yum -y install zeal
+
 # npm node.js para coffescript y coffelint de vim
 yum -y install nodejs npm nodejs-mkdirp 
 npm install -g inherits optimist coffee-script coffeelint meteorite less
