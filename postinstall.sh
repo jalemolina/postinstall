@@ -1,55 +1,40 @@
 #!/bin/bash
 
+# colorls
+dnf install -y ruby ruby-devel rubygem-colorize
+gem install colorls
 
-yum -y install yum-plugin-fastestmirror
-yum -y update
+##pip, virtualenv, git
+dnf -y install git python3-pip
+pip3 install --upgrade virtualenv virtualenvwrapper pep8 pylint pyflakes flake8 rope ropemode Pygments
 
-# rpmfusion
-# Probar con los de postinstaller y sino con xenode
-rpm --import http://sourceforge.net/projects/postinstaller/files/data/RPM-GPG-KEY-rpmfusion-free-fedora-20
-rpm --import http://commondatastorage.googleapis.com/xenodecdn/RPM-GPG-KEY-rpmfusion-free-fedora-20
-rpm --import http://sourceforge.net/projects/postinstaller/files/data/RPM-GPG-KEY-rpmfusion-nonfree-fedora-20 
-rpm --import http://commondatastorage.googleapis.com/xenodecdn/RPM-GPG-KEY-rpmfusion-nonfree-fedora-20
-#### sigue de lo anterior
-yum localinstall --nogpgcheck http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-stable.noarch.rpm http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-stable.noarch.rpm
-#### LIVNA
-rpm -ivhu http://rpm.livna.org/livna-release.rpm
-yum -y update
-
-# drivers video libre
-yum -y install mesa-dri-drivers mesa-libGLU
-yum -y install libtxc_dxtn --enablerepo=rpmfusion-free-updates-testing
-yum -y update
-
-# Pre carga de aplicaciones para acelerar el sistema
-yum -y install preload
+dnf -y install highlight highlight-gui
 
 # Compresores y descompresores
-yum -y install unrar arj p7zip p7zip-plugins lha sharutils unzoo unace bzip2 gzip tar unzip
+dnf -y install unrar arj p7zip p7zip-plugins lha sharutils unzoo unace bzip2 gzip tar unzip
 
 # Una terminal como la gente
-yum -y install zsh
+dnf -y install zsh
 git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
 chsh -s /bin/zsh
 
-#desarrollo (falta todavia)
-yum -y groupinstall "Development Tools"
-yum -y groupinstall "Development Libraries"
+#desarrollo
+dnf -y groupinstall "Development Tools"
+dnf -y groupinstall "Development Libraries"
+
 ##vim, plugins
-yum -y install vim-common vim-enhanced vim-latex vim-latex-doc vim-X11 ctags ack
+dnf -y install vim-common vim-enhanced vim-latex vim-latex-doc vim-X11 ctags ack
+git clone git@github.com:jalemolina/vim.git ~/.vim
+ln -s ~/.vim/vimrc ~/.vimrc
+ln -s ~/.vim/gvimrc ~/.gvimrc
+
 # Glade
-yum -y install glade
+dnf -y install glade
 ##geany por las dudas
-##pip, virtualenv, git
-yum -y install git python-pip
-python-pip install --upgrade virtualenv pep8 pylint pyflakes flake8 rope ropemode Pygments
-
-yum -y install highlight highlight-gui
-
 #offline documentation with zeal
 dnf copr enable phracek/zeal
-yum -y install zeal
+dnf -y install zeal
 
 # npm node.js para coffescript y coffelint de vim
 yum -y install nodejs npm nodejs-mkdirp 
