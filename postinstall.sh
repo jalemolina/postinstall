@@ -4,8 +4,8 @@
 dnf install -y ruby ruby-devel rubygem-colorize
 gem install colorls
 
-##pip, virtualenv, git
-dnf -y install git python3-pip
+##pip, virtualenv, git, argparse
+dnf -y install git python3-pip argparse
 pip3 install --upgrade virtualenv virtualenvwrapper pep8 pylint pyflakes flake8 rope ropemode Pygments
 
 dnf -y install highlight highlight-gui
