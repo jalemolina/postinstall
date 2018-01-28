@@ -13,7 +13,7 @@ dnf -y install highlight highlight-gui
 # Compresores y descompresores
 dnf -y install unrar arj p7zip p7zip-plugins lha sharutils unzoo unace bzip2 gzip tar unzip
 
-# Una terminal como la gente
+# Una shell como la gente
 dnf -y install zsh
 git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
@@ -123,17 +123,13 @@ yum -y update
 yum -y install google-chrome-stable
 
 # Impresoras HP
-yum -y install hplip hplip-common libsane-hpaio
+#yum -y install hplip hplip-common libsane-hpaio
 
 # Juegos
 yum -y install gbrainy gltron warmux gnome-games*
 
 # Gnome shell extensions
-yum -y install  gnome-shell-extension-weather gnome-shell-extension-pomodoro
+yum -y install gnome-shell-extension-weather gnome-shell-extension-pomodoro
 
 # Terminal desplegable
-yum -y install glib gtk vala vte vte3 vte-devel vte3-devel
-git clone https://github.com/linvinus/AltYo AltYo
-cd AltYo
-make
-make install
+dnf -y install tilix tilix-nautilus
